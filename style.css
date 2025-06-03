@@ -1,0 +1,77 @@
+/* Reset some styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  padding: 15px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.banner {
+  background: url('../images/banner.jpg') center/cover no-repeat;
+  padding: 80px;
+  text-align: center;
+  color: white;
+  background-color: #555;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Optional: allows wrapping on small screens */
+  padding: 30px;
+}
+
+.product-card {
+  background: rgba(211, 224, 211, 0.925);
+  width: 220px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.product-card button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #28a745;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
