@@ -70,7 +70,7 @@
       backdrop-filter: blur(12px);
       border-radius: 18px;
       padding: 60px 40px;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       text-align: center;
       box-shadow: 0 8px 24px rgba(0,0,0,0.1);
       color: #222;
@@ -88,6 +88,23 @@
       font-weight: 400;
       color: #333;
       opacity: 0.85;
+    }
+
+    /* ✅ Offer Marquee */
+    .offer-marquee {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      border: 2px solid #ff9900;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .offer-marquee marquee:hover {
+      animation-play-state: paused;
     }
 
     .products {
@@ -206,47 +223,16 @@
     </nav>
   </header>
 
-
-
-
-
   <section class="banner">
     <h2>Welcome to LIVE SHOP</h2>
-    <img src="">
     <p>Minimal design. Maximum value. Shop your tech favorites now!</p>
   </section>
-  <section>
-    
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Laptop Offer Marquee</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-    }
-    .offer-marquee {
-      background-color: #ffcc00;
-      color: #000;
-      padding: 10px;
-      font-size: 18px;
-      font-weight: bold;
-      border: 2px solid #ff9900;
-    }
-  </style>
-</head>
-<body>
 
-<div class="offer-marquee">
-  <marquee behavior="scroll" direction="left" scrollamount="6">
-    🎉 Mega Sale! Get Upto 40% OFF on Laptops | Free Shipping | Limited Time Offer | Shop Now at www.yourstore.com 🛒💻
-  </marquee>
-</div>
-
-</body>
-</html>
+  <!-- ✅ Fixed Offer Marquee -->
+  <section class="offer-marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      🎉 Mega Sale! Get Upto 40% OFF on Laptops | Free Shipping | Limited Time Offer | Shop Now at www.yourstore.com 🛒💻
+    </marquee>
   </section>
 
   <section class="products" id="product-list">
