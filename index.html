@@ -90,7 +90,7 @@
       opacity: 0.85;
     }
 
-    /* ✅ Offer Marquee */
+    /* Offer Marquee */
     .offer-marquee {
       background-color: #ffcc00;
       color: #000;
@@ -102,9 +102,6 @@
       border-radius: 8px;
       width: 100%;
       max-width: 1200px;
-    }
-    .offer-marquee marquee:hover {
-      animation-play-state: paused;
     }
 
     .products {
@@ -173,7 +170,6 @@
       border-radius: 30px;
       color: white;
       box-shadow: 0 6px 15px rgba(78, 204, 163, 0.5);
-      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
       user-select: none;
     }
@@ -228,52 +224,45 @@
     <p>Minimal design. Maximum value. Shop your tech favorites now!</p>
   </section>
 
-  <!-- ✅ Fixed Offer Marquee -->
   <section class="offer-marquee">
     <marquee behavior="scroll" direction="left" scrollamount="6">
       🎉 Mega Sale! Get Upto 40% OFF on Laptops | Free Shipping | Limited Time Offer | Shop Now at www.yourstore.com 🛒💻
     </marquee>
   </section>
 
-  <section class="products" id="product-list">
-    <!-- JS will inject products here -->
+  <section class="products">
+    <article class="product-card">
+      <img src="laptop.jpeg" alt="Lenovo Laptop" />
+      <h3>Lenovo</h3>
+      <p>₹40,000</p>
+      <button>Add to Cart</button>
+    </article>
+
+    <article class="product-card">
+      <img src="macbook.jpeg" alt="MacBook" />
+      <h3>MacBook</h3>
+      <p>₹1,20,000</p>
+      <button>Add to Cart</button>
+    </article>
+
+    <article class="product-card">
+      <img src="asus.jpeg" alt="Asus Laptop" />
+      <h3>Asus</h3>
+      <p>₹80,000</p>
+      <button>Add to Cart</button>
+    </article>
+
+    <article class="product-card">
+      <img src="keyboard.jpeg" alt="Keyboard" />
+      <h3>Keyboard</h3>
+      <p>₹1,500</p>
+      <button>Add to Cart</button>
+    </article>
   </section>
 
   <footer>
     <p>&copy; 2025 LIVE SHOP. All rights reserved.</p>
   </footer>
-
-  <script>
-    const products = [
-      { name: "Lenovo", price: "₹40,000", img: "laptop.jpeg" },
-      { name: "MacBook", price: "₹1,20,000", img: "macbook.jpeg" },
-      { name: "Asus", price: "₹80,000", img: "asus.jpeg" },
-      { name: "Keyboard", price: "₹1,500", img: "keyboard.jpeg" }
-    ];
-
-    const productList = document.getElementById('product-list');
-
-    products.forEach(({name, price, img}) => {
-      const card = document.createElement('article');
-      card.className = 'product-card';
-      card.innerHTML = `
-        <img src="${img}" alt="${name} image" loading="lazy" />
-        <h3>${name}</h3>
-        <p>${price}</p>
-        <button type="button">Add to Cart</button>
-      `;
-
-      card.querySelector('button').addEventListener('click', () => {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.push({ name, price, img });
-        localStorage.setItem('cart', JSON.stringify(cart));
-        alert(`${name} added to cart!`);
-        window.location.href = 'cart.html';
-      });
-
-      productList.appendChild(card);
-    });
-  </script>
 
 </body>
 </html>
